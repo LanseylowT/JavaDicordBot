@@ -17,7 +17,7 @@ public class EventListeners extends ListenerAdapter {
     @Override
     public void onMessageReactionAdd(MessageReactionAddEvent event) {
         // If reaction is added, send a message to the server
-        // Example: User reacted to a message with a "{emoji}" in the #{chann} channel
+
         User user = event.getUser();
         String emoji = event.getReaction().getEmoji().getAsReactionCode();
         String channelMention = event.getChannel().getAsMention();
