@@ -1,3 +1,4 @@
+import commands.CommandManager;
 import io.github.cdimascio.dotenv.Dotenv;
 import listeners.EventListeners;
 import net.dv8tion.jda.api.OnlineStatus;
@@ -57,6 +58,7 @@ public class Main {
 
         // Register Listeners
         shardManager.addEventListener(new EventListeners());
+        shardManager.addEventListener(new CommandManager());
     }
 
     // Setting up the Config getters
